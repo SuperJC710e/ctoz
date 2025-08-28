@@ -30,3 +30,6 @@ backend/test_import/
 # Env
 .env
 .env.*
+
+# Root node modules
+node_modules/
