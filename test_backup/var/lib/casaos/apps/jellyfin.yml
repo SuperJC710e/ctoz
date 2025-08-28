@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  jellyfin:
+    image: jellyfin/jellyfin:latest
+    container_name: jellyfin
+    ports:
+      - "8096:8096"
+    volumes:
+      - /DATA/AppData/jellyfin/config:/config
+      - /DATA/AppData/jellyfin/cache:/cache
+      - /DATA/Media:/media:ro
+    environment:
+      - JELLYFIN_PublishedServerUrl=http://localhost:8096
+    restart: unless-stopped
+    devices:
+      - /dev/dri:/dev/dri

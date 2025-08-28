@@ -1,0 +1,38 @@
+<svg width="32" height="32" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景渐变圆形 -->
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1E40AF;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <circle cx="256" cy="256" r="240" fill="url(#bg)"/>
+  
+  <!-- 简化的迁移图标 -->
+  <g transform="translate(256, 256)">
+    <!-- 左侧源系统 -->
+    <rect x="-80" y="-40" width="60" height="80" rx="6" fill="white" opacity="0.95"/>
+    <circle cx="-50" cy="-10" r="8" fill="#3B82F6"/>
+    <rect x="-60" y="10" width="30" height="3" rx="1.5" fill="#3B82F6"/>
+    <rect x="-60" y="18" width="30" height="3" rx="1.5" fill="#3B82F6"/>
+    <rect x="-60" y="26" width="20" height="3" rx="1.5" fill="#3B82F6"/>
+    
+    <!-- 右侧目标系统 -->
+    <rect x="20" y="-40" width="60" height="80" rx="6" fill="white" opacity="0.95"/>
+    <circle cx="50" cy="-10" r="8" fill="#10B981"/>
+    <rect x="30" y="10" width="30" height="3" rx="1.5" fill="#10B981"/>
+    <rect x="30" y="18" width="30" height="3" rx="1.5" fill="#10B981"/>
+    <rect x="30" y="26" width="20" height="3" rx="1.5" fill="#10B981"/>
+    
+    <!-- 迁移箭头 -->
+    <path d="M-20 0 L20 0" stroke="white" stroke-width="4" stroke-linecap="round"/>
+    <path d="M10 -6 L20 0 L10 6" fill="white"/>
+    <path d="M-10 -6 L-20 0 L-10 6" fill="white"/>
+    
+    <!-- 数据流点 -->
+    <circle cx="-10" cy="0" r="3" fill="white" opacity="0.8"/>
+    <circle cx="0" cy="0" r="3" fill="white" opacity="0.8"/>
+    <circle cx="10" cy="0" r="3" fill="white" opacity="0.8"/>
+  </g>
+</svg> 

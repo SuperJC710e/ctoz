@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  ctoz:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - GIN_MODE=release
+    restart: unless-stopped
+    volumes:
+      # 如果需要持久化日志或配置文件，可以添加卷挂载
+      - ./logs:/app/logs
+    networks:
+      - ctoz-network
+
+networks:
+  ctoz-network:
+    driver: bridge
+
+volumes:
+  logs:
+    driver: local

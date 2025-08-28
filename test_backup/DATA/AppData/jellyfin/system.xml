@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServerConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <LogFileRetentionDays>3</LogFileRetentionDays>
+  <IsStartupWizardCompleted>true</IsStartupWizardCompleted>
+  <CachePath>/cache</CachePath>
+  <PreviousVersion>10.8.0.0</PreviousVersion>
+  <PreviousVersionStr>10.8.0</PreviousVersionStr>
+  <EnableMetrics>false</EnableMetrics>
+  <EnableNormalizedItemByNameIds>true</EnableNormalizedItemByNameIds>
+  <IsPortAuthorized>true</IsPortAuthorized>
+  <QuickConnectAvailable>true</QuickConnectAvailable>
+  <EnableCaseSensitiveItemIds>true</EnableCaseSensitiveItemIds>
+  <DisableLiveTvChannelUserDataName>true</DisableLiveTvChannelUserDataName>
+  <MetadataPath>/config/metadata</MetadataPath>
+  <MetadataNetworkPath />
+  <PreferredMetadataLanguage>en</PreferredMetadataLanguage>
+  <MetadataCountryCode>US</MetadataCountryCode>
+  <SortReplaceCharacters>
+    <string>.</string>
+    <string>+</string>
+    <string>%</string>
+  </SortReplaceCharacters>
+  <SortRemoveCharacters>
+    <string>,</string>
+    <string>&amp;</string>
+    <string>-</string>
+    <string>{</string>
+    <string>}</string>
+    <string>'</string>
+  </SortRemoveCharacters>
+  <SortRemoveWords>
+    <string>the</string>
+    <string>a</string>
+    <string>an</string>
+  </SortRemoveWords>
+  <MinResumePct>5</MinResumePct>
+  <MaxResumePct>90</MaxResumePct>
+  <MinResumeDurationSeconds>300</MinResumeDurationSeconds>
+  <MinAudiobookResume>5</MinAudiobookResume>
+  <MaxAudiobookResume>5</MaxAudiobookResume>
+  <LibraryMonitorDelay>60</LibraryMonitorDelay>
+  <EnableDashboardResponseCaching>true</EnableDashboardResponseCaching>
+  <DashboardSourcePath />
+  <ImageSavingConvention>Compatible</ImageSavingConvention>
+  <MetadataOptions>
+    <MetadataOptions>
+      <ItemType>Book</ItemType>
+      <DisabledMetadataFetchers />
+      <LocalMetadataReaderOrder />
+      <DisabledImageFetchers />
+      <ImageFetcherOrder />
+    </MetadataOptions>
+  </MetadataOptions>
+  <RemoteClientBitrateLimit>0</RemoteClientBitrateLimit>
+  <EnableFolderView>false</EnableFolderView>
+  <EnableGroupingIntoCollections>false</EnableGroupingIntoCollections>
+  <DisplaySpecialsWithinSeasons>true</DisplaySpecialsWithinSeasons>
+  <CodecsUsed />
+  <PluginRepositories />
+  <EnableExternalContentInSuggestions>true</EnableExternalContentInSuggestions>
+  <ImageExtractionTimeoutMs>0</ImageExtractionTimeoutMs>
+  <PathSubstitutions />
+  <EnableSlowResponseWarning>true</EnableSlowResponseWarning>
+  <SlowResponseThresholdMs>500</SlowResponseThresholdMs>
+  <CorsHosts />
+  <ActivityLogRetentionDays>30</ActivityLogRetentionDays>
+  <LibraryScanFanoutConcurrency>0</LibraryScanFanoutConcurrency>
+  <LibraryMetadataRefreshConcurrency>0</LibraryMetadataRefreshConcurrency>
+  <RemoveOldPlugins>false</RemoveOldPlugins>
+  <AllowClientLogUpload>false</AllowClientLogUpload>
+</ServerConfiguration>

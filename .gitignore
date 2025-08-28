@@ -1,0 +1,32 @@
+# Node / frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/.DS_Store
+
+# Logs
+*.log
+backend/server.log
+
+# OS files
+.DS_Store
+
+# Backend build artifacts/binaries
+backend/main
+backend/migration-tool
+
+# Temp and large data
+backend/download/
+backend/uploads/
+backend/exports/
+backend/compress/
+backend/packages/
+backend/test_import/
+
+# Archives
+*.zip
+*.tar.gz
+
+# Env
+.env
+.env.*
