@@ -93,7 +93,7 @@ const StatusPage: React.FC = () => {
     const handleClose = () => {
     }
 
-    const handleError = (message: any) => {
+    const handleError = (_message: any) => {
       toast.error('WebSocket connection error')
     }
 

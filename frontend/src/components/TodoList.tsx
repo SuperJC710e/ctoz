@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react'
-import { CheckCircle, XCircle, Download, AlertCircle } from 'lucide-react'
+import { CheckCircle, XCircle, AlertCircle } from 'lucide-react'
 import { AppImportStatus, ImportSummary } from '../types'
 import apiClient from '../utils/api'
 
@@ -17,7 +17,7 @@ export default function TodoList({ taskId }: TodoListProps) {
   const [refreshCount, setRefreshCount] = useState(0)
   const [maxRefreshAttempts] = useState(20)
   const [lastDataHash, setLastDataHash] = useState<string>('')
-  const [stableCount, setStableCount] = useState<number>(0)
+  const [, setStableCount] = useState<number>(0)
 
   const generateDataHash = useCallback((apps: AppImportStatus[], summary: ImportSummary | null) => {
     const dataString = JSON.stringify({
