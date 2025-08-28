@@ -54,7 +54,7 @@ RUN echo 'Asia/Shanghai' >/etc/timezone
 
 # 从构建阶段复制文件
 COPY --from=backend-builder /app/main .
-COPY --from=frontend-builder /app/dist ./frontend/dist
+COPY --from=frontend-builder /app/dist ./dist
 
 # 暴露端口
 EXPOSE 8080

@@ -30,7 +30,7 @@ This tool migrates everything under the application configuration (AppData) dire
 ### Docker Compose
 ```bash
 # Clone repository
-git clone https://github.com/your-username/ctoz.git
+git clone https://github.com/LinkLeong/ctoz.git
 cd ctoz
 
 # Start services
@@ -39,15 +39,8 @@ docker-compose up -d
 
 ### Docker CLI
 ```bash
-# Pull image
-docker pull your-username/ctoz:latest
-
 # Run container
-docker run -d \
-  --name ctoz \
-  -p 8080:8080 \
-  -p 3000:3000 \
-  your-username/ctoz:latest
+docker run --rm -p 8080:8080 a624669980/ctoz:latest
 ```
 
 ## Technical Highlights

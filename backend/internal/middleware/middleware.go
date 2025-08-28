@@ -93,7 +93,7 @@ func Security() gin.HandlerFunc {
 		c.Header("X-Frame-Options", "DENY")
 		c.Header("X-XSS-Protection", "1; mode=block")
 		c.Header("Referrer-Policy", "strict-origin-when-cross-origin")
-		c.Header("Content-Security-Policy", "default-src 'self'")
+		c.Header("Content-Security-Policy", "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' ws: wss:; object-src 'none'; base-uri 'self'; frame-ancestors 'none'")
 		c.Next()
 	}
 }
@@ -139,6 +139,19 @@ func Timeout(timeout time.Duration) gin.HandlerFunc {
 
 		c.Request = c.Request.WithContext(ctx)
 		c.Next()
+	}
+}
+
+// NoCacheForHTML 为 HTML 页面设置不缓存响应头
+func NoCacheForHTML() gin.HandlerFunc {
+	return func(c *gin.Context) {
+		c.Next()
+		// 仅对 HTML 响应设置 no-cache，避免首页被 304 缓存
+		if c.Writer.Header().Get("Content-Type") == "text/html; charset=utf-8" {
+			c.Header("Cache-Control", "no-cache, no-store, must-revalidate")
+			c.Header("Pragma", "no-cache")
+			c.Header("Expires", "0")
+		}
 	}
 }
 

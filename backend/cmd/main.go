@@ -26,6 +26,7 @@ func main() {
 	r.Use(middleware.Security())
 	r.Use(middleware.ErrorHandler())
 	r.Use(middleware.Timeout(30 * time.Second))
+	r.Use(middleware.NoCacheForHTML())
 
 	// 创建WebSocket管理器
 	wsManager := websocket.NewManager()
@@ -89,7 +90,7 @@ func main() {
 	r.GET("/ws", handler.HandleWebSocket)
 
 	// 静态文件服务（前端）
-	r.Static("/static", "./dist")
+	r.Static("/assets", "./dist/assets")
 	r.StaticFile("/", "./dist/index.html")
 	r.NoRoute(func(c *gin.Context) {
 		c.File("./dist/index.html")
