@@ -1,0 +1,98 @@
+name: syncthing
+services:
+    syncthing:
+        cpu_shares: 50
+        command: []
+        deploy:
+            resources:
+                limits:
+                    memory: "16774070272"
+        environment:
+            PGID: "0"
+            PUID: "0"
+            TZ: Europe/London
+        image: linuxserver/syncthing:latest
+        labels:
+            icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Syncthing/icon.png
+        network_mode: bridge
+        ports:
+            - target: 22000
+              published: "22000"
+              protocol: tcp
+            - target: 22000
+              published: "22000"
+              protocol: udp
+            - target: 8384
+              published: "8384"
+              protocol: tcp
+            - target: 21027
+              published: "21027"
+              protocol: udp
+        restart: always
+        volumes:
+            - type: bind
+              source: /DATA/AppData/Syncthing/config
+              target: /config
+            - type: bind
+              source: /DATA
+              target: /DATA
+        x-casaos:
+            envs:
+                - container: TZ
+                  description:
+                    en_us: ""
+                - container: PUID
+                  description:
+                    en_us: ""
+                - container: PGID
+                  description:
+                    en_us: ""
+            image: ""
+            ports:
+                - container: "22000"
+                  description:
+                    en_us: ""
+                - container: "22000"
+                  description:
+                    en_us: ""
+                - container: "8384"
+                  description:
+                    en_us: ""
+                - container: "21027"
+                  description:
+                    en_us: ""
+            volumes:
+                - container: /config
+                  description:
+                    en_us: ""
+                - container: /DATA
+                  description:
+                    en_us: ""
+networks:
+    default:
+        name: syncthing_default
+x-casaos:
+    architectures:
+        - amd64
+    author: CasaOS User
+    category: unknown
+    description:
+        en_us: Syncthing is a continuous file synchronization program. It synchronizes files between two or more computers in real time, safely protected from prying eyes. Your data is your data alone and you deserve to choose where it is stored, whether it is shared with some third party, and how it's transmitted over the internet.
+    developer: unknown
+    hostname: ""
+    icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Syncthing/icon.png
+    image: null
+    index: /
+    is_uncontrolled: false
+    main: syncthing
+    port_map: "8384"
+    scheme: http
+    store_app_id: syncthing
+    tagline:
+        en_us: This is a compose app converted from a legacy app (CasaOS v0.4.3 or earlier)
+    thumbnail: ""
+    tips:
+        custom: This is a compose app converted from a legacy app (CasaOS v0.4.3 or earlier)
+    title:
+        custom: ""
+        en_us: Syncthing

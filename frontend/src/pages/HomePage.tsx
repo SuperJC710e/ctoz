@@ -210,43 +210,25 @@ const HomePage: React.FC = () => {
           <div>
             <h3 className="text-lg font-medium text-gray-900 mb-3">Migration Scope</h3>
             <p className="text-gray-600 mb-3">
-              This tool migrates everything inside the AppData directory and the application YAML (compose) files. Applications will be re-installed on ZimaOS.
+              CasaOS to ZimaOS Migration Tool migrates everything inside the AppData directory and the application YAML (compose) files:
             </p>
-            <ul className="list-disc list-inside text-gray-600 space-y-1">
-              <li>All contents under AppData</li>
-              <li>Application definitions (Compose/YAML)</li>
-            </ul>
+            <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-3">
+              <ul className="space-y-2">
+                <li className="flex items-center text-blue-700">
+                  <span className="font-bold text-blue-600 mr-2">•</span>
+                  <span className="font-bold text-blue-600">All contents under AppData</span>
+                </li>
+                <li className="flex items-center text-blue-700">
+                  <span className="font-bold text-blue-600 mr-2">•</span>
+                  <span className="font-bold text-blue-600">Application definitions (Compose/YAML)</span>
+                </li>
+              </ul>
+            </div>
+            <p className="text-gray-600">
+              Applications will be re-installed on ZimaOS.
+            </p>
           </div>
 
-          {/* 快速安装 */}
-          <div>
-            <h3 className="text-lg font-medium text-gray-900 mb-3">Quick Install</h3>
-            <div className="bg-gray-50 p-4 rounded-lg">
-              <h4 className="font-medium text-gray-800 mb-2">Docker Compose</h4>
-              <pre className="text-sm text-gray-700 bg-white p-3 rounded border overflow-x-auto">
-{`# Clone repository
-git clone https://github.com/your-username/ctoz.git
-cd ctoz
-
-# Start services
-docker-compose up -d`}
-              </pre>
-            </div>
-            <div className="bg-gray-50 p-4 rounded-lg mt-3">
-              <h4 className="font-medium text-gray-800 mb-2">Docker CLI</h4>
-              <pre className="text-sm text-gray-700 bg-white p-3 rounded border overflow-x-auto">
-{`# Pull image
-docker pull your-username/ctoz:latest
-
-# Run container
-docker run -d \
-  --name ctoz \
-  -p 8080:8080 \
-  -p 3000:3000 \
-  your-username/ctoz:latest`}
-              </pre>
-            </div>
-          </div>
 
           {/* 注意事项 */}
           <div>

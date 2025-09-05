@@ -18,7 +18,8 @@ class WebSocketClient {
   private connectWebSocket(): void {
     if (!this.taskId) return
 
-    const wsUrl = `ws://localhost:8080/ws?task_id=${this.taskId}`
+    // 使用相对路径，让Vite代理处理WebSocket连接
+    const wsUrl = `ws://${window.location.host}/ws?task_id=${this.taskId}`
     console.log(`[WebSocket] 尝试连接到: ${wsUrl}`)
     
     try {

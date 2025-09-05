@@ -1,0 +1,86 @@
+name: bold_cartwright
+services:
+    bold_cartwright:
+        environment:
+            GPG_KEY: A035C8C19219BA821ECEA86B64E628F8D684696D
+            LANG: C.UTF-8
+            NODE_PATH: /usr/local/bin:/usr/local/pnpm-global/5/node_modules:/usr/local/lib/node_modules:/root/.local/share/pnpm/global/5/node_modules
+            PATH: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/root/.local/share/pnpm:/root/.local/share/pnpm/global/5/node_modules
+            PNPM_HOME: /root/.local/share/pnpm
+            PS1: '\u@\h:\w $ '
+            PYTHON_SHA256: 07a4356e912900e61a15cb0949a06c4a05012e213ecd6b4e84d0f67aabbee372
+            PYTHON_VERSION: 3.11.10
+            QL_BRANCH: master
+            QL_DIR: /ql
+            SHELL: /bin/bash
+        image: whyour/qinglong
+        network_mode: default
+        restart: "no"
+        volumes:
+            - type: bind
+              source: /var/lib/docker/volumes/667081d768b7898b693c6cd7db38bee442e6f4db19ffdf9cf5451e54d6cb9df1/_data
+              target: /ql/data
+        x-casaos:
+            envs:
+                - container: PATH
+                  description:
+                    en_us: ""
+                - container: LANG
+                  description:
+                    en_us: ""
+                - container: GPG_KEY
+                  description:
+                    en_us: ""
+                - container: PYTHON_VERSION
+                  description:
+                    en_us: ""
+                - container: PYTHON_SHA256
+                  description:
+                    en_us: ""
+                - container: PNPM_HOME
+                  description:
+                    en_us: ""
+                - container: NODE_PATH
+                  description:
+                    en_us: ""
+                - container: SHELL
+                  description:
+                    en_us: ""
+                - container: PS1
+                  description:
+                    en_us: ""
+                - container: QL_DIR
+                  description:
+                    en_us: ""
+                - container: QL_BRANCH
+                  description:
+                    en_us: ""
+            image: ""
+            volumes:
+                - container: /ql/data
+                  description:
+                    en_us: ""
+networks:
+    default:
+        name: bold_cartwright_default
+x-casaos:
+    architectures:
+        - amd64
+    author: CasaOS User
+    category: unknown
+    description:
+        en_us: ""
+    developer: unknown
+    icon: ""
+    image: null
+    is_uncontrolled: false
+    main: bold_cartwright
+    scheme: http
+    store_app_id: bold_cartwright
+    tagline:
+        en_us: This is a compose app converted from a legacy app (CasaOS v0.4.3 or earlier)
+    thumbnail: ""
+    tips:
+        custom: This is a compose app converted from a legacy app (CasaOS v0.4.3 or earlier)
+    title:
+        en_us: bold_cartwright
