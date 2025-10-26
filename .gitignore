@@ -33,3 +33,8 @@ backend/test_import/
 
 # Root node modules
 node_modules/
+
+## Additions
+**/.vscode
+**/.claude
+
